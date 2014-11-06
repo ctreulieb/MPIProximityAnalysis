@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iomanip>
 #include "Service.h"
+#include "Residence.h"
 using namespace std;
 
 /*
@@ -16,6 +17,8 @@ using namespace std;
 */
 
 const string SERVICES_DATA_PATH = "data/services.dat";
+const string RESIDENCES_DATA_PATH = "data/residences.dat";
+
 vector<service> services;
 
 void populateServices() {

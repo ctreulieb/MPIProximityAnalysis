@@ -5,7 +5,7 @@
 	@Created 06/11/2014
 	@Author Tyler Garrow
 
-	Implements Service Class
+	Implements service Class
 */
 
 	/*Constructors*/

@@ -16,6 +16,9 @@
     <Filter Include="ServiceClass">
       <UniqueIdentifier>{1cbdb76b-64b1-4fd3-8f83-8837c24b5c91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ResidenceClass">
+      <UniqueIdentifier>{5a15ceb2-9f25-46cc-8457-5abd344ebadf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,10 +27,16 @@
     <ClCompile Include="Service.cpp">
       <Filter>ServiceClass</Filter>
     </ClCompile>
+    <ClCompile Include="Residence.cpp">
+      <Filter>ResidenceClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Service.h">
       <Filter>ServiceClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Residence.h">
+      <Filter>ResidenceClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
