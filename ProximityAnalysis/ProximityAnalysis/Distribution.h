@@ -26,6 +26,7 @@ private:
 	int m_bandTwo;
 	int m_bandThree;
 	int m_bandFour;
+	int m_total;
 
 public:
 	distrabution(std::vector<double> const&);

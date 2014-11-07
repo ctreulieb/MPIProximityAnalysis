@@ -84,12 +84,12 @@
   <ItemGroup>
     <ClCompile Include="Distrabution.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Residence.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="Service.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Distribution.h" />
-    <ClInclude Include="Residence.h" />
+    <ClInclude Include="Location.h" />
     <ClInclude Include="Service.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

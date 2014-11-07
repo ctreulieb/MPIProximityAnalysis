@@ -16,11 +16,11 @@
     <Filter Include="ServiceClass">
       <UniqueIdentifier>{1cbdb76b-64b1-4fd3-8f83-8837c24b5c91}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ResidenceClass">
-      <UniqueIdentifier>{5a15ceb2-9f25-46cc-8457-5abd344ebadf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="DistributionClass">
       <UniqueIdentifier>{616fc7f8-7159-45f8-afaa-c45b989ed1a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LocationClass">
+      <UniqueIdentifier>{5a15ceb2-9f25-46cc-8457-5abd344ebadf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,22 +30,22 @@
     <ClCompile Include="Service.cpp">
       <Filter>ServiceClass</Filter>
     </ClCompile>
-    <ClCompile Include="Residence.cpp">
-      <Filter>ResidenceClass</Filter>
-    </ClCompile>
     <ClCompile Include="Distrabution.cpp">
       <Filter>DistributionClass</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>LocationClass</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Service.h">
       <Filter>ServiceClass</Filter>
     </ClInclude>
-    <ClInclude Include="Residence.h">
-      <Filter>ResidenceClass</Filter>
-    </ClInclude>
     <ClInclude Include="Distribution.h">
       <Filter>DistributionClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>LocationClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

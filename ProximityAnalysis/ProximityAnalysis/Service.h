@@ -2,36 +2,29 @@
 #define SERVICE_H
 
 #include <string>
+#include <vector>
+#include <iostream>
+#include "Location.h"
 
 /*
 	Service.h
 	@Created 06/11/2014
 	@Author Tyler Garrow
 
-	Class to contain  a individual recored read from servie.dat 
+	Contrainst Information Related to a Service and The Service Locations
 */
 
 class service {
 private:
 	std::string m_serivceTypeCode;
-	double m_EastingCoordinate;
-	double m_NorthingCoordinate;
-
+	std::string m_serviceType;
+	
 public:
 	/*Constructors*/
-	service();
-	service(std::string, double, double);
+	service(std::string);
 	
-	/*Getters*/
-	std::string getServiceTypeCode();
-	double getEastingCoordinate();
-	double getNorthingCoordinate();
-
-	/*Setters*/
-	void setServiceTypeCode(std::string);
-	void setEastingCoordinate(double);
-	void setNorthingCoordinate(double);
-
+	void print(std::ostream&);
+	std::vector<location> m_locations;
 };
 
 #endif
