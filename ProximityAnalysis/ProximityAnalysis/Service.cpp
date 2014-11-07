@@ -1,4 +1,5 @@
 
+#include<string>
 #include"Service.h"
 /*
 	Service.cpp
@@ -11,13 +12,13 @@
 	/*Constructors*/
 service::service() {}
 
-service::service(int code, double x, double y) : 
+service::service(std::string code, double x, double y) : 
 	m_serivceTypeCode(code),
 	m_EastingCoordinate(x),
 	m_NorthingCoordinate(y) { }
 
 	/*Getters*/
-int service::getServiceTypeCode() {
+std::string service::getServiceTypeCode() {
 	return m_serivceTypeCode;
 }
 
@@ -30,7 +31,7 @@ double service::getNorthingCoordinate() {
 }
 
 	/*Setters*/
-void service::setServiceTypeCode(int code) {
+void service::setServiceTypeCode(std::string code) {
 	m_serivceTypeCode = code;
 }
 

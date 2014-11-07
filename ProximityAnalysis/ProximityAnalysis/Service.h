@@ -1,6 +1,8 @@
 #ifndef SERVICE_H
 #define SERVICE_H
 
+#include <string>
+
 /*
 	Service.h
 	@Created 06/11/2014
@@ -11,22 +13,22 @@
 
 class service {
 private:
-	int m_serivceTypeCode;
+	std::string m_serivceTypeCode;
 	double m_EastingCoordinate;
 	double m_NorthingCoordinate;
 
 public:
 	/*Constructors*/
 	service();
-	service(int, double, double);
+	service(std::string, double, double);
 	
 	/*Getters*/
-	int getServiceTypeCode();
+	std::string getServiceTypeCode();
 	double getEastingCoordinate();
 	double getNorthingCoordinate();
 
 	/*Setters*/
-	void setServiceTypeCode(int);
+	void setServiceTypeCode(std::string);
 	void setEastingCoordinate(double);
 	void setNorthingCoordinate(double);
 

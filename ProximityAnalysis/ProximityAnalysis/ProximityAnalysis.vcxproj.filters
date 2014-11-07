@@ -19,6 +19,9 @@
     <Filter Include="ResidenceClass">
       <UniqueIdentifier>{5a15ceb2-9f25-46cc-8457-5abd344ebadf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DistributionClass">
+      <UniqueIdentifier>{616fc7f8-7159-45f8-afaa-c45b989ed1a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,6 +33,9 @@
     <ClCompile Include="Residence.cpp">
       <Filter>ResidenceClass</Filter>
     </ClCompile>
+    <ClCompile Include="Distrabution.cpp">
+      <Filter>DistributionClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Service.h">
@@ -37,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="Residence.h">
       <Filter>ResidenceClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Distribution.h">
+      <Filter>DistributionClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
