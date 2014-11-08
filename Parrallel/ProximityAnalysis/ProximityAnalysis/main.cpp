@@ -21,7 +21,7 @@ using namespace std;
 
 const string RESIDENCES_DATA_PATH = "data/residences.dat";
 
-const string USAGE = "USAGE GOES HERE";
+const string USAGE = "ProximityAnalysis [serviceCode]";
 
 vector<location> services;
 vector<double> distances;

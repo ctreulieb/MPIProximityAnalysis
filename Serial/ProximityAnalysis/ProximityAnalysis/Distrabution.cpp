@@ -77,8 +77,4 @@ void distrabution::print(ostream &out) {
 	out.width(25); out << right << ((double)m_bandFour/(double)m_total) * 100;
 	out << endl;
 
-	out << m_bandOne << endl;
-	out << m_bandTwo << endl;
-	out << m_bandThree << endl;
-	out << m_bandFour << endl;
 }
