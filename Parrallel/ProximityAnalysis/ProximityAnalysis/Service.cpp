@@ -31,7 +31,7 @@ service::service(std::string code) : m_serivceTypeCode(code)
 { 
 	//grab the locations of services
 	ifstream file;
-	file.open(SERVICES_DATA_PATH);
+	file.open(SERVICES_DATA_PATH.c_str());
 	string codeHold;
 	double xHold, yHold;
 
@@ -44,7 +44,7 @@ service::service(std::string code) : m_serivceTypeCode(code)
 	file.close();
 
 	//grab name of service
-	file.open(SERVICES_CODES_PATH);
+	file.open(SERVICES_CODES_PATH.c_str());
 	string  lineHold , nameHold;
 	
 

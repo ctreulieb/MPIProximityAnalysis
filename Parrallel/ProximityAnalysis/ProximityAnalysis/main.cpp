@@ -31,7 +31,7 @@ void proccessResidences();
 
 void proccessResidences(vector<location> const &services) {
 	ifstream file;
-	file.open(RESIDENCES_DATA_PATH);
+	file.open(RESIDENCES_DATA_PATH.c_str());
 	double xHold, yHold;
 	while(file >> xHold >> yHold) {
 		distances.push_back(calcShortestStraightLineDistance(location(xHold,yHold),services));
