@@ -106,7 +106,7 @@ int main (int argc, char* argv[])
 
 	end = MPI_Wtime();
 
-	if(rank = 0) {
+	if(rank == 0) {
 		s.print(cout);
 		cout.width(30); cout << left <<"Elapsed Time in Seconds: ";
 		cout.width(15); cout << right << end - start;
