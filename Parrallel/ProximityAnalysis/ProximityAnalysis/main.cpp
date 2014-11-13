@@ -78,6 +78,10 @@ double calcShortestStraightLineDistance(location r, vector<location> s) {
 
 int main (int argc, char* argv[]) 
 {
+
+	if( !MPI_Init(&argc, &argv) == MPI_SUCCESS )
+		return EXIT_FAILURE;
+
 	int numProcs, rank;
 	MPI_Comm_size(MPI_COMM_WORLD, &numProcs);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -85,21 +89,17 @@ int main (int argc, char* argv[])
 	if(argc < 2) {
 		if(rank = 0)
 			cerr  << USAGE << endl;
+		MPI_Finalize();
 		return EXIT_SUCCESS;
 	}
 
-	if( !MPI_Init(&argc, &argv) == MPI_SUCCESS )
-		return EXIT_FAILURE;
+	
 
 	locale loc("");
 	cout.imbue(loc);
 
 	double start, end;
 	start = MPI_Wtime();
-
-	
-
-
 
 	service s(argv[1]);
 	proccessResidences(rank,numProcs,s.m_locations);
@@ -116,5 +116,5 @@ int main (int argc, char* argv[])
 	distrabution dist(distances);
 	dist.print(cout);
 
-	MPI_Finalize();
+	
 }
