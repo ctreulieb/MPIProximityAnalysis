@@ -20,8 +20,8 @@ using namespace std;
 */
 
 
-const string SERVICES_DATA_PATH = "data/services.dat";
-const string SERVICES_CODES_PATH = "data/service-codes.csv";
+const string SERVICES_DATA_PATH = "Data/services.dat";
+const string SERVICES_CODES_PATH = "Data/service-codes.csv";
 
 
 

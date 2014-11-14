@@ -19,7 +19,7 @@ using namespace std;
 */
 
 
-const string RESIDENCES_DATA_PATH = "data/residences.dat";
+const string RESIDENCES_DATA_PATH = "Data/residences.dat";
 
 const string USAGE = "USAGE ERROR: Include the name of the input file on the command line!";
 
@@ -87,13 +87,11 @@ int main (int argc, char* argv[])
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
 	if(argc < 2) {
-		if(rank = 0)
+		if(rank == 0)
 			cerr  << USAGE << endl;
 		MPI_Finalize();
 		return EXIT_SUCCESS;
 	}
-
-	
 
 	locale loc("");
 	cout.imbue(loc);
@@ -115,6 +113,4 @@ int main (int argc, char* argv[])
 
 	distrabution dist(distances);
 	dist.print(cout);
-
-	
 }
