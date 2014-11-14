@@ -113,4 +113,6 @@ int main (int argc, char* argv[])
 
 	distrabution dist(distances);
 	dist.print(cout);
+
+	MPI_Finalize();
 }
