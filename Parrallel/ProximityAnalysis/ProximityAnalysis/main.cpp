@@ -23,6 +23,9 @@ const string RESIDENCES_DATA_PATH = "Data/residences.dat";
 
 const string USAGE = "USAGE ERROR: Include the name of the input file on the command line!";
 
+
+int NUM_ROWS = 5, NUM_COLS = 6;
+
 vector<location> services;
 vector<double> distances;
 
@@ -74,6 +77,18 @@ double calcShortestStraightLineDistance(location r, vector<location> s) {
 		}
 	}
 	return shortest;
+}
+
+MPI_Datatype createColType()
+{
+	int count = NUM_ROWS;
+	int blocklen = 1;
+	int stride = NUM_COLS;
+	MPI_Datatype t;
+	MPI_Type_vector(count, blocklen, stride, MPI_INT, &t);
+	MPI_Type_commit(&t);
+
+	return t;
 }
 
 int main (int argc, char* argv[]) 
