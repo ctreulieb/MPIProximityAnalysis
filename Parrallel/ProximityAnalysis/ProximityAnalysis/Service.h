@@ -9,7 +9,7 @@
 /*
 	Service.h
 	@Created 06/11/2014
-	@Author Tyler Garrow
+	@Author Tyler Garrow & Craig Treulieb
 
 	Contrainst Information Related to a Service and The Service Locations
 */

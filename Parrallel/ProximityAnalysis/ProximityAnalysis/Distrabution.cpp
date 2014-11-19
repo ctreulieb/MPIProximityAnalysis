@@ -8,7 +8,7 @@ using namespace std;
 /*
 	Distrabution.cpp
 	@Created 07/11/2014
-	@Author Tyler Garrow
+	@Author Tyler Garrow & Craig Treulieb
 
 	implements distribution class
 */
