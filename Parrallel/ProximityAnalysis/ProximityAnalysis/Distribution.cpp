@@ -6,17 +6,17 @@
 
 using namespace std;
 /*
-	Distrabution.cpp
+	Distribution.cpp
 	@Created 07/11/2014
 	@Author Tyler Garrow & Craig Treulieb
 
 	implements distribution class
 */
 
-distrabution::distrabution(){}
+distribution::distribution(){}
 
 	/*Constructors*/
-distrabution::distrabution(vector<double> const &distances) {
+distribution::distribution(vector<double> const &distances) {
 
 	m_total = distances.size();
 	m_bandOne = 0;
@@ -42,7 +42,7 @@ distrabution::distrabution(vector<double> const &distances) {
 }
 
 
-distrabution::distrabution(Rec_t const& rec) {
+distribution::distribution(Rec_t const& rec) {
 
 	m_bandOne = rec.bandOneCount;
 	m_bandTwo = rec.bandTwoCount;
@@ -58,7 +58,7 @@ distrabution::distrabution(Rec_t const& rec) {
 }
 
 	/*Public Methods*/
-void distrabution::print(ostream &out) {
+void distribution::print(ostream &out) {
 
 	int rank;
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);

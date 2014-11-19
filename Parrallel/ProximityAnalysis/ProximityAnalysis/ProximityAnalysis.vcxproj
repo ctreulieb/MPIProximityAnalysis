@@ -82,7 +82,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Distrabution.cpp" />
+    <ClCompile Include="Distribution.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Service.cpp" />

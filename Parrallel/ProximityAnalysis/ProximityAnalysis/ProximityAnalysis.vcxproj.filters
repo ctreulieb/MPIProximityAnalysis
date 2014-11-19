@@ -33,11 +33,11 @@
     <ClCompile Include="Service.cpp">
       <Filter>ServiceClass</Filter>
     </ClCompile>
-    <ClCompile Include="Distrabution.cpp">
-      <Filter>DistributionClass</Filter>
-    </ClCompile>
     <ClCompile Include="Location.cpp">
       <Filter>LocationClass</Filter>
+    </ClCompile>
+    <ClCompile Include="Distribution.cpp">
+      <Filter>DistributionClass</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

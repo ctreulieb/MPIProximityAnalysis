@@ -20,7 +20,7 @@
 	Assumes distances are given as Metres
 */
 
-class distrabution {
+class distribution {
 private:
 
 
@@ -32,9 +32,9 @@ public:
 	int m_total;
 
 	double m_bandOneP, m_bandTwoP, m_bandThreeP, m_bandFourP; 
-	distrabution(std::vector<double> const&);
-	distrabution(Rec_t const&);
-	distrabution();
+	distribution(std::vector<double> const&);
+	distribution(Rec_t const&);
+	distribution();
 
 	void print(std::ostream&);
 };

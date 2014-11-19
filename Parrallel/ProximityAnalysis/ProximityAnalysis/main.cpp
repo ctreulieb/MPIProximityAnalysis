@@ -131,11 +131,11 @@ int main (int argc, char* argv[])
 
 
 	Rec_t rec;
-	vector<distrabution> ds(numProcs);
+	vector<distribution> ds(numProcs);
 
 	MPI_Datatype recType = createRecType();
 
-	distrabution dist(distances);
+	distribution dist(distances);
 
 	rec.bandOneCount = dist.m_bandOne;
 	rec.bandTwoCount = dist.m_bandTwo;
@@ -158,7 +158,7 @@ int main (int argc, char* argv[])
 		MPI_Status status;
 		for(unsigned i = 1; i < numProcs; i++) {
 			MPI_Recv(&rec, 1, recType, i, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
-			ds[i] = distrabution(rec);
+			ds[i] = distribution(rec);
 		}
 
 		s.print(cout);

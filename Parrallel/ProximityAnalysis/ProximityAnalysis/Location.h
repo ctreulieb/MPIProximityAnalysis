@@ -4,9 +4,9 @@
 /*
 	Residence.h
 	@Created 06/11/2014
-	@Author Tyler Garrow
+	@Author Tyler Garrow, Craig Treulieb
 
-	Class to contain  a individual recored read from residence.dat 
+	Class to contain an individual record read from residence.dat 
 */
 
 class location {

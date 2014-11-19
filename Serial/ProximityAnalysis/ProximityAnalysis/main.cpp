@@ -15,7 +15,7 @@ using namespace std;
 /*
 	main.cpp
 	@Created 06/11/2014
-	@Author Tyler Garrow
+	@Author Tyler Garrow, Craig Treulieb
 */
 
 
