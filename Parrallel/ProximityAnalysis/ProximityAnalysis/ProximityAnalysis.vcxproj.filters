@@ -22,6 +22,9 @@
     <Filter Include="LocationClass">
       <UniqueIdentifier>{5a15ceb2-9f25-46cc-8457-5abd344ebadf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RecType">
+      <UniqueIdentifier>{7057f1f6-e7ff-42e6-a04a-0966bf183e28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="Location.h">
       <Filter>LocationClass</Filter>
+    </ClInclude>
+    <ClInclude Include="RecType.h">
+      <Filter>RecType</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

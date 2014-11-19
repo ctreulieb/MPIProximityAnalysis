@@ -3,6 +3,7 @@
 
 #include<vector>
 #include<iostream>
+#include"RecType.h"
 
 /*
 	Distribution.h
@@ -22,14 +23,18 @@
 class distrabution {
 private:
 
+
+public:
 	int m_bandOne; 
 	int m_bandTwo;
 	int m_bandThree;
 	int m_bandFour;
 	int m_total;
 
-public:
+	double m_bandOneP, m_bandTwoP, m_bandThreeP, m_bandFourP; 
 	distrabution(std::vector<double> const&);
+	distrabution(Rec_t const&);
+	distrabution();
 
 	void print(std::ostream&);
 };

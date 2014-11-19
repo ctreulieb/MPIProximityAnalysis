@@ -13,7 +13,7 @@ using namespace std;
 	implements distribution class
 */
 
-
+distrabution::distrabution(){}
 
 	/*Constructors*/
 distrabution::distrabution(vector<double> const &distances) {
@@ -34,6 +34,27 @@ distrabution::distrabution(vector<double> const &distances) {
 			m_bandFour++;
 		}
 	}
+
+	m_bandOneP = ((double)m_bandOne/(double)m_total) * 100;
+	m_bandTwoP = ((double)m_bandTwo/(double)m_total) * 100;
+	m_bandThreeP = ((double)m_bandThree/(double)m_total) * 100;
+	m_bandFourP = ((double)m_bandFour/(double)m_total) * 100;
+}
+
+
+distrabution::distrabution(Rec_t const& rec) {
+
+	m_bandOne = rec.bandOneCount;
+	m_bandTwo = rec.bandTwoCount;
+	m_bandThree = rec.bandThreeCount; 
+	m_bandFour = rec.bandFourCount;
+
+	m_total = m_bandOne + m_bandTwo + m_bandThree + m_bandFour;
+
+	m_bandOneP = ((double)m_bandOne/(double)m_total) * 100;
+	m_bandTwoP = ((double)m_bandTwo/(double)m_total) * 100;
+	m_bandThreeP = ((double)m_bandThree/(double)m_total) * 100;
+	m_bandFourP = ((double)m_bandFour/(double)m_total) * 100;
 }
 
 	/*Public Methods*/
@@ -42,10 +63,6 @@ void distrabution::print(ostream &out) {
 	int rank;
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-
-	out << "Process #" << rank << " Results for " << m_total  << " Addresses ........" << endl;
-
-	out << endl;
 
 	out.width(25); out << right << "Nearest Service (KM)";
 	out.width(25); out << right << "# of Addresses";

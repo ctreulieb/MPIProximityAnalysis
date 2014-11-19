@@ -90,6 +90,7 @@
   <ItemGroup>
     <ClInclude Include="Distribution.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="RecType.h" />
     <ClInclude Include="Service.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
