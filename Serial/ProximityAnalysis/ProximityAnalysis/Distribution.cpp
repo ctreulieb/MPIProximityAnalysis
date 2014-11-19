@@ -6,9 +6,9 @@
 
 using namespace std;
 /*
-	Distrabution.cpp
+	Distribution.cpp
 	@Created 07/11/2014
-	@Author Tyler Garrow
+	@Author Tyler Garrow, Craig Treulieb
 
 	implements distribution class
 */
@@ -16,7 +16,7 @@ using namespace std;
 
 
 	/*Constructors*/
-distrabution::distrabution(vector<double> const &distances) {
+distribution::distribution(vector<double> const &distances) {
 
 	m_total = distances.size();
 	m_bandOne = 0;
@@ -37,7 +37,7 @@ distrabution::distrabution(vector<double> const &distances) {
 }
 
 	/*Public Methods*/
-void distrabution::print(ostream &out) {
+void distribution::print(ostream &out) {
 
 	int rank;
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);

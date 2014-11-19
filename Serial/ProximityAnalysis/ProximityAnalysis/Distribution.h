@@ -7,7 +7,7 @@
 /*
 	Distribution.h
 	@Created 07/11/2014
-	@Author Tyler Garrow
+	@Author Tyler Garrow, Craig Treulieb
 
 	@Notes
 	Distribution Bands (Kms)
@@ -19,7 +19,7 @@
 	Assumes distances are given as Metres
 */
 
-class distrabution {
+class distribution {
 private:
 
 	int m_bandOne; 
@@ -29,7 +29,7 @@ private:
 	int m_total;
 
 public:
-	distrabution(std::vector<double> const&);
+	distribution(std::vector<double> const&);
 
 	void print(std::ostream&);
 };

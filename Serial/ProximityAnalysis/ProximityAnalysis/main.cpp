@@ -87,7 +87,7 @@ int main (int argc, char* argv[])
 	cout << endl << endl;
 
 
-	distrabution dist(distances);
+	distribution dist(distances);
 	dist.print(cout);
 
 	MPI_Finalize();
