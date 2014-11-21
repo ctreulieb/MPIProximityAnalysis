@@ -37,7 +37,26 @@ public:
 	distribution();
 
 	void print(std::ostream&);
+
+	distribution& operator +=(const distribution& b) 
+	{
+		this->m_total += b.m_total;
+
+		this->m_bandOne += b.m_bandOne;
+		this->m_bandTwo += b.m_bandTwo;
+		this->m_bandThree += b.m_bandThree;
+		this->m_bandFour += b.m_bandFour;
+
+		this->m_bandOneP = ((double)this->m_bandOne/(double)this->m_total) * 100;
+		this->m_bandTwoP = ((double)this->m_bandTwo/(double)this->m_total) * 100;
+		this->m_bandThreeP = ((double)this->m_bandThree/(double)this->m_total) * 100;
+		this->m_bandFourP = ((double)this->m_bandFour/(double)this->m_total) * 100;
+
+		return *this;
+	}
+
 };
+
 
 
 #endif

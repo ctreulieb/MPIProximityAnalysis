@@ -129,36 +129,32 @@ int main (int argc, char* argv[])
 	service s(argv[1]);
 	proccessResidences(rank,numProcs,s.m_locations);
 
-
-	Rec_t rec;
+	Rec_t recs[MAX_MSG_SIZE];
+	Rec_t rec[1];
 	vector<distribution> ds(numProcs);
 
 	MPI_Datatype recType = createRecType();
 
 	distribution dist(distances);
 
-	rec.bandOneCount = dist.m_bandOne;
-	rec.bandTwoCount = dist.m_bandTwo;
-	rec.bandThreeCount = dist.m_bandThree;
-	rec.bandFourCount = dist.m_bandFour;
-	rec.bandOnePercent = dist.m_bandOneP;
-	rec.bandTwoPercent = dist.m_bandTwoP;
-	rec.bandThreePercent = dist.m_bandThreeP;
-	rec.bandFourPercent = dist.m_bandFourP;
+	rec[0].bandOneCount = dist.m_bandOne;
+	rec[0].bandTwoCount = dist.m_bandTwo;
+	rec[0].bandThreeCount = dist.m_bandThree;
+	rec[0].bandFourCount = dist.m_bandFour;
+	rec[0].bandOnePercent = dist.m_bandOneP;
+	rec[0].bandTwoPercent = dist.m_bandTwoP;
+	rec[0].bandThreePercent = dist.m_bandThreeP;
+	rec[0].bandFourPercent = dist.m_bandFourP;
 
-	if(rank != 0) {
-		MPI_Send(&rec, 1, recType, 0, 1, MPI_COMM_WORLD);
-	}
-
+	
+	MPI_Gather(&rec,1,recType, recs, 1 , recType, 0 ,MPI_COMM_WORLD );
 
 	end = MPI_Wtime();
 
 	if(rank == 0) {
-		ds[0] = dist;
-		MPI_Status status;
-		for(unsigned i = 1; i < numProcs; i++) {
-			MPI_Recv(&rec, 1, recType, i, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
-			ds[i] = distribution(rec);
+		
+		for(unsigned i = 0; i < numProcs; i++) {
+			ds[i] = recs[i];
 		}
 
 		s.print(cout);
@@ -166,10 +162,18 @@ int main (int argc, char* argv[])
 		cout.width(15); cout << right << end - start;
 		cout << endl << endl;
 
+
+		distribution finalDist;
 		for(unsigned i = 0; i < ds.size(); ++i) {
 			cout << "Process #" << i  << " Results for " << ds[i].m_total  << " Addresses ........" << endl << endl;
+
+			finalDist += ds[i];
 			ds[i].print(cout);
 		}
+
+		cout << "Final results:"<< " Results for " << finalDist.m_total  << " Addresses ........" << endl << endl;
+		finalDist.print(cout);
+
 	}
 
 

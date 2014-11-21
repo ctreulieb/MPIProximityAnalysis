@@ -13,7 +13,18 @@ using namespace std;
 	implements distribution class
 */
 
-distribution::distribution(){}
+distribution::distribution(){
+	m_total = 0;
+	m_bandOne = 0;
+	m_bandTwo = 0;
+	m_bandThree = 0; 
+	m_bandFour = 0;
+	m_bandOneP = 0;
+	m_bandTwoP = 0;
+	m_bandThreeP = 0;
+	m_bandFourP = 0;
+
+}
 
 	/*Constructors*/
 distribution::distribution(vector<double> const &distances) {
